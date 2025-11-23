@@ -1,7 +1,10 @@
-// Mobile menu toggle
 const toggle = document.querySelector('.mobile-menu-toggle');
 const menu = document.querySelector('nav ul');
-toggle.addEventListener('click', () => menu.classList.toggle('active'));
+
+toggle.addEventListener('click', () => {
+    menu.classList.toggle('show'); // shows/hides the menu
+});
+
 
 // WhatsApp form
 function sendWhatsApp(e) {
