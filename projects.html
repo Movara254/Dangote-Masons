@@ -22,10 +22,9 @@
 
 
 <body>
-
 <header>
   <div class="logo">
-    <a href="index.html"><img src="assets/images/logo.png" alt="Dangote Logo"></a>
+    <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
   </div>
   <nav>
     <ul class="nav-menu">
@@ -38,7 +37,6 @@
   </nav>
   <div class="mobile-menu-toggle">☰</div>
 </header>
-
 
 
 <!-- Projects Hero -->
@@ -265,6 +263,18 @@
     <p>© 2025 Dangote Masons & Procurement. All Rights Reserved.</p>
   </div>
 </footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const menu = document.querySelector('nav ul');
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  }
+});
+</script>
 
 </body>
 </html>
