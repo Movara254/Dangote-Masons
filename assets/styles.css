@@ -79,23 +79,22 @@ header nav ul li a:hover {
         display: block;
     }
 
-    nav ul {
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--white);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        z-index: 999;
-    }
+   /* Mobile menu hidden by default */
+nav ul {
+  display: none;       /* hide menu */
+  flex-direction: column;
+  position: absolute;
+  top: 60px;           /* below header */
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  z-index: 1000;
+}
 
-    nav ul.show {
-        max-height: 500px; /* adjust if menu grows */
-    }
+/* Show menu when toggle is clicked */
+nav ul.show {
+  display: flex;
+}
 
     nav ul li {
         text-align: center;
