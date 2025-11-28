@@ -12,9 +12,9 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden; /* locks page to screen width */
-}
 
-/* Header container */
+}
+/* ===== HEADER CONTAINER ===== */
 header {
     display: flex;
     justify-content: space-between;
@@ -26,6 +26,7 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
 /* Logo */
 header .logo img {
     width: 48px;   /* slimmer logo */
@@ -45,7 +46,7 @@ header nav ul li a {
     text-decoration: none;
     color: var(--black);
     font-weight: 600;
-    padding: 6px 8px; /* reduced padding */
+    padding: 6px 8px;
     transition: 0.2s;
 }
 
@@ -60,6 +61,7 @@ header nav ul li a:hover {
     display: none; /* hide by default */
     font-size: 28px;
     cursor: pointer;
+    z-index: 1001; /* above menu */
 }
 
 /* ===== MOBILE MENU ===== */
@@ -80,21 +82,25 @@ header nav ul li a:hover {
         width: 100%;
         background: var(--white);
         position: absolute;
-        top: 60px; /* below header */
+        top: 100%; /* drop below header */
         left: 0;
         margin: 0;
         padding: 0;
         gap: 0;
-        z-index: 999;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: max-height 0.3s ease; /* smooth dropdown */
+        overflow: hidden;
+        max-height: 0; /* hidden */
     }
 
     nav ul.show {
-        display: flex; /* shown when toggle is active */
+        display: flex;
+        max-height: 500px; /* enough to show all items */
     }
 
     nav ul li {
         text-align: center;
-        padding: 12px 0;
         border-bottom: 1px solid #ddd;
     }
 
@@ -103,12 +109,6 @@ header nav ul li a:hover {
         padding: 12px 0;
         white-space: nowrap;
     }
-}
-
-/* Prevent horizontal scroll on all devices */
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
 }
 
 .hero {
