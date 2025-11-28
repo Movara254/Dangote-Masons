@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== Mobile Menu Toggle =====
   const toggle = document.querySelector('.mobile-menu-toggle');
-  const menu = document.querySelector('nav ul');
+  const menu = document.querySelector('.nav-menu');
 
   if (toggle && menu) {
     toggle.addEventListener('click', () => {
