@@ -1,4 +1,3 @@
-<script>
 document.addEventListener('DOMContentLoaded', () => {
 
   // ===== FAQ Toggle =====
@@ -20,9 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.mobile-menu-toggle');
   const menu = document.querySelector('nav ul');
 
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-  });
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  }
 
 });
-</script>
