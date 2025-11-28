@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     item.addEventListener('click', () => {
       item.classList.toggle('active');
 
-      // Close other FAQ items (optional)
+      // Optional: close other FAQ items
       faqItems.forEach(other => {
         if (other !== item) {
           other.classList.remove('active');
