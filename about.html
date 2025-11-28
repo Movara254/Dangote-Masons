@@ -37,6 +37,7 @@
   <div class="mobile-menu-toggle">☰</div>
 </header>
 
+
 <!-- ABOUT HERO -->
 <section class="about-hero" style="background-image: url('../assets/images/project17.jpg');">
     <div class="about-hero-overlay">
@@ -298,19 +299,19 @@
     <p>© 2025 Dangote Masons & Procurement. All Rights Reserved.</p>
   </div>
 </footer>
-  <script>document.getElementById('year-about').textContent = new Date().getFullYear();</script>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   const toggle = document.querySelector('.mobile-menu-toggle');
   const menu = document.querySelector('nav ul');
 
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
+  if(toggle && menu) {
+    toggle.addEventListener('click', function() {
       menu.classList.toggle('show');
     });
   }
 });
 </script>
+
 
 </body>
 </html>

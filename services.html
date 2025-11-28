@@ -39,6 +39,7 @@
 </header>
 
 
+
  <!-- Services Hero (Reusing Home Hero) -->
 <section style="
     background-image: url('assets/images/project23.jpg'); /* same hero as home */
@@ -212,17 +213,18 @@
   </div>
 </footer>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   const toggle = document.querySelector('.mobile-menu-toggle');
   const menu = document.querySelector('nav ul');
 
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
+  if(toggle && menu) {
+    toggle.addEventListener('click', function() {
       menu.classList.toggle('show');
     });
   }
 });
 </script>
+
 
 </body>
 </html>

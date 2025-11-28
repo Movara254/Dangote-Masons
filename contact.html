@@ -38,6 +38,7 @@
   <div class="mobile-menu-toggle">☰</div>
 </header>
 
+
  <section style="text-align:center; padding:40px 20px;">
         <h1 style="color:#b70c0c; margin-bottom:10px;">Request a Quote / Contact Us</h1>
         <p style="color:#555; font-size:1rem; max-width:600px; margin:auto;">
@@ -140,19 +141,19 @@
     <p>© 2025 Dangote Masons & Procurement. All Rights Reserved.</p>
   </div>
 </footer>
-	<script>document.getElementById('year-contact').textContent = new Date().getFullYear();</script>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   const toggle = document.querySelector('.mobile-menu-toggle');
   const menu = document.querySelector('nav ul');
 
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
+  if(toggle && menu) {
+    toggle.addEventListener('click', function() {
       menu.classList.toggle('show');
     });
   }
 });
 </script>
+
 
 </body>
 </html>
