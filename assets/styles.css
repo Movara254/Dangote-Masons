@@ -27,17 +27,27 @@ header {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Logo */
-header .logo img {
-    width: 48px;   /* slimmer logo */
-    height: auto;  /* maintains aspect ratio */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Navigation menu */
+header .logo img {
+    width: 48px;
+    height: auto;
+}
+
 header nav ul {
     display: flex;
     list-style: none;
-    gap: 16px; /* tighter gap */
+    gap: 16px;
     margin: 0;
     align-items: center;
 }
@@ -56,47 +66,35 @@ header nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Hamburger / Mobile menu toggle */
 .mobile-menu-toggle {
-    display: none; /* hide by default */
+    display: none;
     font-size: 28px;
     cursor: pointer;
-    z-index: 1001; /* above menu */
+    z-index: 1001;
 }
 
 /* ===== MOBILE MENU ===== */
 @media (max-width: 768px) {
-    header {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        padding: 8px 12px;
-    }
-
     .mobile-menu-toggle {
-        display: block; /* show hamburger */
+        display: block;
     }
 
     nav ul {
         flex-direction: column;
-        display: none; /* hidden by default */
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
         background: var(--white);
-        position: absolute;
-        top: 100%; /* drop below header */
-        left: 0;
-        margin: 0;
-        padding: 0;
-        gap: 0;
-        z-index: 1000;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        transition: max-height 0.3s ease; /* smooth dropdown */
+        max-height: 0;
         overflow: hidden;
-        max-height: 0; /* hidden */
+        transition: max-height 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 999;
     }
 
     nav ul.show {
-        display: flex;
-        max-height: 500px; /* enough to show all items */
+        max-height: 500px; /* adjust if menu grows */
     }
 
     nav ul li {
@@ -107,7 +105,6 @@ header nav ul li a:hover {
     nav ul li a {
         display: block;
         padding: 12px 0;
-        white-space: nowrap;
     }
 }
 
