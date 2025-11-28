@@ -56,10 +56,8 @@ header nav ul li a:hover {
 
 /* Hamburger */
 .mobile-menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  z-index: 1001;
+    display: block;
+    cursor: pointer;
 }
 
 /* ===== MOBILE MENU ===== */
@@ -69,20 +67,16 @@ header nav ul li a:hover {
   }
 
   nav ul {
-    display: none;        /* hidden by default */
+    display: none;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: var(--white);
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  nav ul.show {
-    display: flex;        /* shown when toggle clicked */
-  }
+}
+nav ul.show {
+    display: flex;
+}
+.mobile-menu-toggle {
+    display: block;
+    cursor: pointer;
+}
 
   nav ul li {
     text-align: center;
